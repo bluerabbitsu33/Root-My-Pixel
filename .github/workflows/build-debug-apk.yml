@@ -35,13 +35,6 @@ jobs:
         with:
           cache-disabled: false
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          # compileSdk 37 requires platform android-37
-          api-level: 37
-          cache: true
-
       - name: Install NDK required by AGP 9.3.1
         # AGP 9.3.1 uses NDK 28.2.13676358 as default android.ndkVersion.
         # GitHub runners pre-install a different NDK and export ANDROID_NDK_HOME to it,
